@@ -1,7 +1,21 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import lib.Callback
+import lib.Lib
+//import lib.foo
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+
+    // foo is a Java function in Lib class
+    Lib().foo(
+        "",
+        { println("something") },
+        1, 2, 3
+    )
+
+    //This will not compile at first, requires import of the function:
+//    Lib().foo(
+//        "",
+//        1, 2, 3
+//        { println("something") },
+//    )
+
 }

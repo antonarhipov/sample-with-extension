@@ -1,2 +1,5 @@
-package lib;public interface Callback {
+package lib;
+
+public interface Callback {
+     void run();
 }
